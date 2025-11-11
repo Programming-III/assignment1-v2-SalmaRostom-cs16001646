@@ -8,7 +8,8 @@ class Student:class Person{
         int yearLevel;
         string major;
     public:
-        void Student(int y=0;string m="",string namePerson="",int idPerson=0):class Person(namePerson,idPerson);
+        void Student(int y;string m,string namePerson,int idPerson):class Person(namePerson,idPerson);
+        void Student():class Person();
         void display();
         ~Student();
 };
