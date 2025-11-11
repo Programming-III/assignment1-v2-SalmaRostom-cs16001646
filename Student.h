@@ -3,12 +3,12 @@
 
 #include "Person.h"
 #include <string>
-class Student{
+class Student:class Person{
     private:
         int yearLevel;
         string major;
     public:
-        void Student(int y=0;string m="");
+        void Student(int y=0;string m="",string namePerson="",int idPerson=0):class Person(namePerson,idPerson);
         void display();
 };
 #endif
