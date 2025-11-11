@@ -8,7 +8,9 @@ class Person{
         string name;
         int id;
     public:
-    void display();
+        void Person(string n="",int i=0);
+        void display();
+        ~Person();
 };
 #endif
 
