@@ -70,7 +70,7 @@ void Instructor::display(){
 }
 
 // ==================== Course Class Implementation ====================
-void Course::Course(string c=,string n,int m,Student* s,int cs,int yearLevelStudent,string majorStudent){
+void Course::Course(string c=,string n,int m,Student* s,int cs,int yearLevelStudent,string majorStudent);class Student(yearLevelStudent,majorStudent){
     courseCode=c;
     courseName=n;
     maxStudents=m;
