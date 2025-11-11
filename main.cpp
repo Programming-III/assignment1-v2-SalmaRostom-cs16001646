@@ -9,40 +9,95 @@
 using namespace std;
 
 // ==================== Person Class Implementation =========================
-
-
-
-
-
-
-
+void Person::Person(string n="",int i=0){
+    name=n;
+    id=i;
+}
+void Person::display(){
+    cout<<"Person Info: "<<endln;
+    cout<<"Name: "<<name<<endln;
+    cout<<"ID: "<<id<<endln;
+}
 
 // ==================== Student Class Implementation ====================
-
-
-
-
+void Student::Student(int y=0;string m="",string namePerson="",int idPerson=0):class Person(namePerson,idPerson){
+    yearLevel=y;
+    major=m;
+   name=namePerson;
+   id=idPerson;
+}
+void Student::display(){
+   cout<<"Student Info: "<<endln;
+    cout<<"Name : "<<namePerson<<endln;
+    cout<<"Year level: "<<yearLevel<<endln;
+    cout<<"Major: "<<major<<endln;
+}
 
 
 // ==================== Instructor Class Implementation ====================
-
-
-
-
+void Instructor::Instructor(string d="",int y=0,string namePerson="",int idPerson=0):class Person(namePerson,idPerson){
+    department=d;
+    experienceYears=y;
+   name=namePerson;
+   id=idPerson;
+}
+void Instructor::display(){
+    cout<<"Instructor Info: "<<endln;
+   cout<<"Name : "<<namePerson<<endln;
+    cout<<"Department: "<<department<<endln;
+    cout<<"Experience Years: "<<experienceYears<<endln;
+}
 
 
 // ==================== Course Class Implementation ====================
+void Course::Course(string c="",string n="",int m=0,Student* s=NULL,int cs=0,string namePerson="",int idPerson=0):class Person(namePerson,idPerson){
+    courseCode=c;
+    courseName=n;
+    maxStudents=m;
+    students=s;
+    currentStudents=cs;
+   name=namePerson;
+   id=idPerson;
+}
+void Course::addStudent(const Student& s){
+    if(currentStudents+1<maxStudents){
+        Array a=new Array(currentStudents+1);
+    for(int i=0;i<currentStudents;i++){
+        students[i]==a[i];
+    }
+    a[currentStudents]==s;
+    students=a;
+    a=students;
+    delete [] a;
+}
 
-
-
-
-
-
-
+void Course::displayCourseInfo(){
+    cout<<"Course Info: "<<endln;
+    cout<<"Course Code: "<<courseCode<<endln;
+    cout<<"Course Name: "<<courseName<<endln;
+    cout<<"Max Students: "<<maxStudents<<endln;
+    cout<<"Current Students: "<<currentStudents<<endln;
+     cout<<"Students: "<<endln;
+    for(int i=0;i<currentStudents;i++){
+         cout<<students[i]<<endln;
+    }
+}
+Course::~Course(){
+   delete [] students;
+}
 
 // ==================== Main Function ====================
 int main() {
+   Person p=("Omar Nabil",16645);
+   Student s=(3,"cs"):
+   Instructor i=("cs",6);
+   Course c=("4568","cs",30,&s,14);
+
+   c.addStudent(s);
+   s.display();
+   i.display();
+   c.displayCourseInfo();
    
-    
+   
     return 0;
 }
