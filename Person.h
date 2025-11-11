@@ -12,11 +12,7 @@ class Person{
 };
 #endif
 
-#include "Person.H"
-void Person::display(){
-    cout<<"Name: "<<name<<endln;
-    cout<<"ID: "<<id<<endln;
-}
+
 
 
 
