@@ -9,9 +9,13 @@
 using namespace std;
 
 // ==================== Person Class Implementation =========================
-void Person::Person(string n="",int i=0){
+void Person::Person(string n,int i){
     name=n;
     id=i;
+}
+void Person::Person(){
+    name="";
+    id=0;
 }
 void Person::display(){
     cout<<"Person Info: "<<endln;
@@ -22,11 +26,17 @@ void Person::display(){
 }
 
 // ==================== Student Class Implementation ====================
-void Student::Student(int y=0;string m="",string namePerson="",int idPerson=0):class Person(namePerson,idPerson){
+void Student::Student(int y;string m,string namePerson,int idPerson):class Person(namePerson,idPerson){
     yearLevel=y;
     major=m;
-   name=namePerson;
-   id=idPerson;
+    name=namePerson;
+    id=idPerson;
+}
+void Student::Student():class Person(){
+    yearLevel=0;
+    major="";
+    name="";
+    id=0;
 }
 void Student::display(){
    cout<<"Student Info: "<<endln;
@@ -38,11 +48,17 @@ void Student::display(){
 }
 
 // ==================== Instructor Class Implementation ====================
-void Instructor::Instructor(string d="",int y=0,string namePerson="",int idPerson=0):class Person(namePerson,idPerson){
+void Instructor::Instructor(string d,int y,string namePerson,int idPerson):class Person(namePerson,idPerson){
     department=d;
     experienceYears=y;
-   name=namePerson;
-   id=idPerson;
+    name=namePerson;
+    id=idPerson;
+}
+void Instructor::Instructor():class Person(){
+    department="";
+    experienceYears=0;
+    name="";
+    id=0;
 }
 void Instructor::display(){
     cout<<"Instructor Info: "<<endln;
@@ -54,12 +70,19 @@ void Instructor::display(){
 }
 
 // ==================== Course Class Implementation ====================
-void Course::Course(string c="",string n="",int m=0,Student* s=NULL,int cs=0){
+void Course::Course(string c=,string n,int m,Student* s,int cs){
     courseCode=c;
     courseName=n;
     maxStudents=m;
     students=s;
     currentStudents=cs;
+}
+void Course::Course(){
+    courseCode="";
+    courseName="";
+    maxStudents=0;
+    students=NULL;
+    currentStudents=0;
 }
 void Course::addStudent(const Student& s){
     if(currentStudents+1<maxStudents){
