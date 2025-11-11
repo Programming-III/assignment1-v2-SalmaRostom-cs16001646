@@ -10,6 +10,7 @@ class Student:class Person{
     public:
         void Student(int y=0;string m="",string namePerson="",int idPerson=0):class Person(namePerson,idPerson);
         void display();
+        ~Student();
 };
 #endif
 
