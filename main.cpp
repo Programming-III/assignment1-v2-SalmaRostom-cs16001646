@@ -18,6 +18,8 @@ void Person::display(){
     cout<<"Name: "<<name<<endln;
     cout<<"ID: "<<id<<endln;
 }
+~Person(){
+}
 
 // ==================== Student Class Implementation ====================
 void Student::Student(int y=0;string m="",string namePerson="",int idPerson=0):class Person(namePerson,idPerson){
@@ -32,7 +34,8 @@ void Student::display(){
     cout<<"Year level: "<<yearLevel<<endln;
     cout<<"Major: "<<major<<endln;
 }
-
+~Student(){
+}
 
 // ==================== Instructor Class Implementation ====================
 void Instructor::Instructor(string d="",int y=0,string namePerson="",int idPerson=0):class Person(namePerson,idPerson){
@@ -47,7 +50,8 @@ void Instructor::display(){
     cout<<"Department: "<<department<<endln;
     cout<<"Experience Years: "<<experienceYears<<endln;
 }
-
+~Instructor(){
+}
 
 // ==================== Course Class Implementation ====================
 void Course::Course(string c="",string n="",int m=0,Student* s=NULL,int cs=0){
@@ -83,7 +87,7 @@ void Course::displayCourseInfo(){
          cout<<students[i]<<endln;
     }
 }
-Course::~Course(){
+~Course(){
    delete [] students;
 }
 
