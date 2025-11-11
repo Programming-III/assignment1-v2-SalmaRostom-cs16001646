@@ -70,19 +70,23 @@ void Instructor::display(){
 }
 
 // ==================== Course Class Implementation ====================
-void Course::Course(string c=,string n,int m,Student* s,int cs){
+void Course::Course(string c=,string n,int m,Student* s,int cs,int yearLevelStudent,string majorStudent){
     courseCode=c;
     courseName=n;
     maxStudents=m;
     students=s;
     currentStudents=cs;
+    yearLevel=yearLevelStudent;
+    major=majorStudent;
 }
-void Course::Course(){
+void Course::Course():Student(){
     courseCode="";
     courseName="";
     maxStudents=0;
     students=NULL;
     currentStudents=0;
+    yearLevel=0;
+    major="";
 }
 void Course::addStudent(const Student& s){
     if(currentStudents+1<maxStudents){
