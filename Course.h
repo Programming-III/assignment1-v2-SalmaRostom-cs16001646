@@ -15,5 +15,6 @@ class Course:class Student{
         void Course(string c="",sting n="",int m=0,Student* s=NULL,int cs=0);
         void addStudent(const Student& s);
         void displayCourseInfo();
+        ~Course();
 };
 #endif
