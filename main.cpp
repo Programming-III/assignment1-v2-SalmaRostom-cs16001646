@@ -50,14 +50,12 @@ void Instructor::display(){
 
 
 // ==================== Course Class Implementation ====================
-void Course::Course(string c="",string n="",int m=0,Student* s=NULL,int cs=0,string namePerson="",int idPerson=0):class Person(namePerson,idPerson){
+void Course::Course(string c="",string n="",int m=0,Student* s=NULL,int cs=0){
     courseCode=c;
     courseName=n;
     maxStudents=m;
     students=s;
     currentStudents=cs;
-   name=namePerson;
-   id=idPerson;
 }
 void Course::addStudent(const Student& s){
     if(currentStudents+1<maxStudents){
@@ -69,6 +67,9 @@ void Course::addStudent(const Student& s){
     students=a;
     a=students;
     delete [] a;
+    }
+    else
+        return;
 }
 
 void Course::displayCourseInfo(){
