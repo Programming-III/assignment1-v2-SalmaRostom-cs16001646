@@ -8,7 +8,8 @@ class Person{
         string name;
         int id;
     public:
-        void Person(string n="",int i=0);
+        void Person(string n,int i);
+        void Person();
         void display();
         ~Person();
 };
