@@ -12,7 +12,8 @@ class Course:class Student{
         Student* students;
         int currentStudents;
     public:
-        void Course(string c="",sting n="",int m=0,Student* s=NULL,int cs=0);
+        void Course(string c,sting n,int m,Student* s,int cs);
+        void Course();
         void addStudent(const Student& s);
         void displayCourseInfo();
         ~Course();
