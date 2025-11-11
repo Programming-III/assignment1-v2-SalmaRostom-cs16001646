@@ -3,17 +3,12 @@
 
 #include "Person.h"
 using namespace std;
-//#write Instructor class here
-
-
-
-
-
-
-
-
-
-
-
-
+class Instructor{
+    private:
+        string department;
+        int experienceYears;
+    public:
+        void Instructor(string d="",int y=0);
+        void display();
+};
 #endif
